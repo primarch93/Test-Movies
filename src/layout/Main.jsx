@@ -1,7 +1,35 @@
-function Main() {
-return <main className="container content">
-    Movies
-</main>
+import React from 'react';
+import { Movies } from '../components/Movies';
+import { Movie } from '../components/Movie';
+
+class Main extends React.Component {
+  state = {
+    movies: [],
+  };
+
+  componentDidMount() {
+    fetch('http://www.omdbapi.com/?apikey=6dd707d5&s=matrix')
+      .then((response) => response.json())
+      .then((data) => this.setState({ movies: data.Search }));
+  }
+
+  render() {
+    const { movies } = this.state;
+
+    return (
+      <main className="container content">
+        {movies ? (
+          movies.length ? (
+            <Movies movies={this.state.movies} />
+          ) : (
+            <h3>No movies found!</h3>
+          )
+        ) : (
+          <h3>Loading...</h3>
+        )}
+      </main>
+    );
+  }
 }
 
-export {Main}
+export { Main };
