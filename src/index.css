@@ -24,7 +24,12 @@ gap: 1rem;
   background-color: #42A5F5;
   border-radius: 5px;
   cursor: pointer;
+height: 55px;
+border-radius: 30px;
 }
 .btn:hover{
   background-color: rgb(0, 147, 200);
+}
+label:not(:last-child){
+  margin-right:10px;
 }
