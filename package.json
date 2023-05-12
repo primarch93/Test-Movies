@@ -2,7 +2,7 @@
   "name": "movies-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://primarch93.github.io/movies-project",
+  "homepage": "http://primarch93.github.io/Test-Movies",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
